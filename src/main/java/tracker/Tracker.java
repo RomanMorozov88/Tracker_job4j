@@ -19,6 +19,9 @@ public class Tracker implements ITracker {
      */
     private static final Random RN = new Random();
 
+    public Tracker() {
+    }
+
     public Item add(Item item) {
         item.setId(this.generateId(this.RN));
         item.setCreate(this.setTimeCreate());

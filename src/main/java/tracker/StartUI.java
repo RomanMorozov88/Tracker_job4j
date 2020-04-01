@@ -27,7 +27,11 @@ public class StartUI {
      * @param input   ввод данных.
      * @param tracker хранилище заявок.
      */
-    public StartUI(Input input, ITracker tracker) {
+//    public StartUI(Input input, ITracker tracker) {
+//        this.input = input;
+//        this.tracker = tracker;
+//    }
+    public StartUI(ConsoleInput input, Tracker tracker) {
         this.input = input;
         this.tracker = tracker;
     }
@@ -50,19 +54,5 @@ public class StartUI {
      */
     public void exitItem() {
         this.stop = false;
-    }
-
-    /**
-     * Запускт программы.
-     *
-     * @param args
-     */
-    public static void main(String[] args) {
-        new StartUI(
-                new ValidateInput(
-                        new ConsoleInput()
-                ),
-                new Tracker()
-        ).init();
     }
 }
