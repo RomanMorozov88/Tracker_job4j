@@ -1,4 +1,7 @@
-package tracker;
+package tracker.trackers;
+
+import tracker.Item;
+import tracker.trackers.ITracker;
 
 import java.util.*;
 import java.util.function.Predicate;

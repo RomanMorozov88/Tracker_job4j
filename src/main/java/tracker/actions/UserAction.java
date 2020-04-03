@@ -1,4 +1,7 @@
-package tracker;
+package tracker.actions;
+
+import tracker.inputs.Input;
+import tracker.trackers.ITracker;
 
 import java.util.function.Consumer;
 

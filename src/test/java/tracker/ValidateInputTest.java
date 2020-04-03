@@ -3,6 +3,8 @@ package tracker;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import tracker.inputs.StubInput;
+import tracker.inputs.ValidateInput;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

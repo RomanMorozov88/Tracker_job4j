@@ -1,10 +1,14 @@
-package tracker;
+package tracker.uis;
+
+import tracker.MenuTracker;
+import tracker.trackers.ITracker;
+import tracker.inputs.Input;
 
 /**
  * @version $Id$
  * @since 0.1
  */
-public class StartUI {
+public class StartUI implements StartUIinterface {
 
     /**
      * Получение данных от пользователя.
@@ -27,11 +31,7 @@ public class StartUI {
      * @param input   ввод данных.
      * @param tracker хранилище заявок.
      */
-//    public StartUI(Input input, ITracker tracker) {
-//        this.input = input;
-//        this.tracker = tracker;
-//    }
-    public StartUI(ConsoleInput input, Tracker tracker) {
+    public StartUI(Input input, ITracker tracker) {
         this.input = input;
         this.tracker = tracker;
     }

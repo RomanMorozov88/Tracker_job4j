@@ -1,4 +1,4 @@
-package tracker;
+package tracker.inputs;
 
 import java.util.List;
 

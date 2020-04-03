@@ -1,4 +1,7 @@
-package tracker;
+package tracker.inputs;
+
+import tracker.exceptions.MenuOutException;
+import tracker.inputs.Input;
 
 import java.util.List;
 

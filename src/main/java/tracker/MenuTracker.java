@@ -1,5 +1,11 @@
 package tracker;
 
+import tracker.actions.BaseAction;
+import tracker.trackers.ITracker;
+import tracker.inputs.Input;
+import tracker.uis.StartUIinterface;
+import tracker.actions.UserAction;
+
 import java.util.*;
 import java.util.function.Consumer;
 
@@ -57,9 +63,9 @@ class FindByNameAction extends BaseAction {
  * Выход.
  */
 class ExitAction extends BaseAction {
-    private StartUI ui;
+    private StartUIinterface ui;
 
-    public ExitAction(int key, String name, StartUI ui) {
+    public ExitAction(int key, String name, StartUIinterface ui) {
         super(key, name);
         this.ui = ui;
     }
@@ -134,7 +140,7 @@ public class MenuTracker {
     /**
      * Метод заполняет массив.
      */
-    public void fillActions(StartUI ui) {
+    public void fillActions(StartUIinterface ui) {
         this.actions.add(this.new AddAction(0, "Добавить новую заявку."));
         this.actions.add(this.new FindAllAction(1, "Показать список всех заявок."));
         this.actions.add(new MenuTracker.EditAction(2, "Редактирование заявки."));

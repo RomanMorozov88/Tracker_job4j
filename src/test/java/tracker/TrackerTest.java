@@ -1,6 +1,7 @@
 package tracker;
 
 import org.junit.Test;
+import tracker.trackers.Tracker;
 
 import java.util.Arrays;
 import java.util.List;

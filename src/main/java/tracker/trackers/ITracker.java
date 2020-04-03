@@ -1,4 +1,6 @@
-package tracker;
+package tracker.trackers;
+
+import tracker.Item;
 
 import java.util.List;
 import java.util.Random;

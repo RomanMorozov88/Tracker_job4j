@@ -1,4 +1,6 @@
-package tracker;
+package tracker.actions;
+
+import tracker.actions.UserAction;
 
 public abstract class BaseAction implements UserAction {
     private final int key;
