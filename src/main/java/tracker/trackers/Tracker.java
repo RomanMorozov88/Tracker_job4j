@@ -1,5 +1,6 @@
 package tracker.trackers;
 
+import org.springframework.stereotype.Component;
 import tracker.Item;
 import tracker.trackers.ITracker;
 
@@ -11,6 +12,7 @@ import java.util.stream.Collectors;
  * @version $Id$
  * @since 0.1
  */
+@Component
 public class Tracker implements ITracker {
     /**
      * Массив для хранение заявок.

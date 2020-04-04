@@ -1,5 +1,6 @@
 package tracker.contextexample;
 
+import org.springframework.stereotype.Component;
 import tracker.*;
 import tracker.inputs.ConsoleInput;
 import tracker.trackers.ITracker;
@@ -11,6 +12,7 @@ import tracker.uis.StartUIinterface;
  * Почти полная копия StartUI за исключением конструктора в котором в качестве параметров указаны
  * конкретные реализации input и tracker.
  */
+@Component
 public class StartUIforContext implements StartUIinterface {
 
     private final Input input;

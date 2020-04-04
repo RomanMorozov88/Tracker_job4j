@@ -1,9 +1,11 @@
 package tracker.inputs;
 
+import org.springframework.stereotype.Component;
 import tracker.exceptions.MenuOutException;
 
 import java.util.*;
 
+@Component
 public class ConsoleInput implements Input {
     private Scanner scanner = new Scanner(System.in);
 
