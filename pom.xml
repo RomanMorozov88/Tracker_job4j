@@ -19,6 +19,24 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>3.6.2</version>
+                <configuration>
+                    <propertyFile>${basedir}/src/main/resources/props/liquibase.properties</propertyFile>
+                    <changeLogFile>${basedir}/db/master.xml</changeLogFile>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>update</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
 
     </build>
@@ -62,6 +80,37 @@
             <version>5.2.5.RELEASE</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.8</version>
+        </dependency>
+
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>test</id>
+            <properties>
+                <profile.propertyFile>${basedir}/src/main/resources/props/liquibase.properties</profile.propertyFile>
+            </properties>
+        </profile>
+        <profile>
+            <id>production</id>
+            <properties>
+                <profile.propertyFile>${basedir}/src/main/resources/props/liquibase.properties</profile.propertyFile>
+            </properties>
+        </profile>
+        <profile>
+            <id>travis</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <profile.propertyFile>${basedir}/src/main/resources/props/liquibase.properties</profile.propertyFile>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>
