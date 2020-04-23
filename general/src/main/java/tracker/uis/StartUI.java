@@ -1,5 +1,6 @@
 package tracker.uis;
 
+import org.springframework.stereotype.Component;
 import tracker.MenuTracker;
 import tracker.trackers.ITracker;
 import tracker.inputs.Input;
@@ -8,6 +9,7 @@ import tracker.inputs.Input;
  * @version $Id$
  * @since 0.1
  */
+@Component
 public class StartUI implements StartUIinterface {
 
     /**

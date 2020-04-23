@@ -6,6 +6,7 @@
 
     <groupId>Tracker_job4j</groupId>
     <artifactId>Tracker_job4j</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -20,26 +21,22 @@
             </plugin>
 
             <plugin>
-                <groupId>org.liquibase</groupId>
-                <artifactId>liquibase-maven-plugin</artifactId>
-                <version>3.6.2</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M4</version>
                 <configuration>
-                    <propertyFile>${basedir}/src/main/resources/props/liquibase.properties</propertyFile>
-                    <changeLogFile>${basedir}/db/master.xml</changeLogFile>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
                 </configuration>
-                <executions>
-                    <execution>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>update</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
 
         </plugins>
 
     </build>
+
+    <modules>
+        <module>springdata</module>
+        <module>general</module>
+    </modules>
 
     <dependencies>
 
